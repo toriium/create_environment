@@ -1,0 +1,52 @@
+- hosts: localhost
+
+  tasks:
+  - name: "apt upgrade"
+    become: true
+    apt: upgrade=dist force_apt_get=yes
+
+  - name: "Install packages from apt"
+    become: true
+    apt:
+      name:
+        - git
+        - zsh
+        - exa
+      state: present
+
+  - name: "GIT clone dotfiles"
+    git:
+      repo: https://github.com/jorgepvasconcelos/dotfiles
+      dest: ~/dotfiles
+      depth: 1
+  - name: "Copy ~/dotfiles to ~"
+    copy:
+      src: ~/dotfiles/
+      dest: ~/
+  - name: "Delete /dotfiles"
+    file:
+      path: ~/dotfiles
+      state: absent
+
+  - name: "GIT clone PL10K"
+    git:
+      repo: https://github.com/romkatv/powerlevel10k.git
+      dest: ~/powerlevel10k
+      depth: 1
+  - name: "GIT clone zsh-autosuggestions"
+    git:
+      repo: https://github.com/zsh-users/zsh-autosuggestions.git
+      dest: ~/.zsh/zsh-autosuggestions
+      depth: 1
+
+#  - name: "asdasd files"
+#    ansible-role-asdf:
+#        asdf_plugins:
+#        - name: "python"
+#          versions: ["latest"]
+#          global: "latest"
+
+#  - name: "Set zsh as default shell"
+#    shell: "chsh -s /usr/bin/zsh"
+##    become: true
+
