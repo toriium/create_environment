@@ -38,6 +38,12 @@
       repo: https://github.com/zsh-users/zsh-autosuggestions.git
       dest: ~/.zsh/zsh-autosuggestions
       depth: 1
+  - name: "GIT clone ASDF"
+    git:
+      repo: https://github.com/asdf-vm/asdf.git
+      dest: ~/.asdf
+      version: v0.11.3
+      depth: 1
 
 #  - name: "asdasd files"
 #    ansible-role-asdf:
