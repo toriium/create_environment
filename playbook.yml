@@ -10,6 +10,7 @@
     apt:
       name:
         - git
+        - curl
         - zsh
         - exa
       state: present
