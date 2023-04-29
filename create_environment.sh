@@ -29,7 +29,7 @@ source ~/.asdf/asdf.sh
 
 # [ASDF] Python
 echo "[ASDF] Python: Installing dependencies"
-apt install make libssl-dev build-essential zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+apt install make libssl-dev build-essential zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev -y
 echo "[ASDF] asdf plugin add python"
 asdf plugin add python
 echo "[ASDF] asdf install python latest"

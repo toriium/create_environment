@@ -5,13 +5,35 @@
     become: true
     apt: upgrade=dist force_apt_get=yes
 
-  - name: "Install packages from apt"
+  - name: "Install USER packages from apt"
     become: true
     apt:
       name:
         - git
         - zsh
         - exa
+      state: present
+
+  - name: "Install DEVELOPMENT packages from apt"
+    become: true
+    apt:
+      name:
+        - make
+        - libssl-dev
+        - build-essential
+        - zlib1g-dev
+        - libbz2-dev
+        - libreadline-dev
+        - libsqlite3-dev
+        - wget
+        - llvm
+        - libncursesw5-dev
+        - xz-utils
+        - tk-dev
+        - libxml2-dev
+        - libxmlsec1-dev
+        - libffi-dev
+        - liblzma-dev
       state: present
 
   - name: "GIT clone dotfiles"
