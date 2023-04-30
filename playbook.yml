@@ -37,6 +37,12 @@
         - libffi-dev
         - liblzma-dev
       state: present
+  
+  - name: "Dowloading Nerd Fonts"
+    unarchive:
+      src: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Agave.zip
+      dest: ~/.fonts
+      remote_src: yes
 
   - name: "GIT clone dotfiles"
     git:
