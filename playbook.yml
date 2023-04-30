@@ -22,6 +22,7 @@
         - make
         - libssl-dev
         - build-essential
+        - ca-certificates
         - zlib1g-dev
         - libbz2-dev
         - libreadline-dev
