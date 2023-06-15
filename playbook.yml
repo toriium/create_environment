@@ -1,80 +1,95 @@
 - hosts: localhost
 
   tasks:
-  - name: "apt upgrade"
-    become: true
-    apt: upgrade=dist force_apt_get=yes
+    - name: "apt upgrade"
+      become: true
+      apt: upgrade=dist force_apt_get=yes
 
-  - name: "Install USER packages from apt"
-    become: true
-    apt:
-      name:
-        - git
-        - curl
-        - zsh
-        - exa
-        - wget
-      state: present
+    - name: "Install USER packages from apt"
+      become: true
+      apt:
+        name:
+          - git
+          - curl
+          - zsh
+          - exa
+          - wget
+        state: present
 
-  - name: "Install DEVELOPMENT packages from apt"
-    become: true
-    apt:
-      name:
-        - make
-        - libssl-dev
-        - build-essential
-        - ca-certificates
-        - zlib1g-dev
-        - libreadline-dev
-        - libsqlite3-dev
-        - llvm
-        - libncursesw5-dev
-        - xz-utils
-        - tk-dev
-        - libxml2-dev
-        - libxmlsec1-dev
-        - libffi-dev
-        - liblzma-dev
-        - lzma
-        - libbz2-dev
-      state: present
-  
-  - name: "Dowloading Nerd Fonts"
-    unarchive:
-      src: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Agave.zip
-      dest: ~/.fonts
-      remote_src: yes
+    - name: "Install DEVELOPMENT packages from apt"
+      become: true
+      apt:
+        name:
+          - make
+          - libssl-dev
+          - build-essential
+          - ca-certificates
+          - zlib1g-dev
+          - libreadline-dev
+          - libsqlite3-dev
+          - llvm
+          - libncursesw5-dev
+          - xz-utils
+          - tk-dev
+          - libxml2-dev
+          - libxmlsec1-dev
+          - libffi-dev
+          - liblzma-dev
+          - lzma
+          - libbz2-dev
+          # Pillow
+          - libtiff5-dev
+          - libjpeg8-dev
+          - libopenjp2-7-dev
+          - zlib1g-dev
+          - libfreetype6-dev
+          - liblcms2-dev
+          - libwebp-dev
+          - tcl8.6-dev
+          - tk8.6-dev
+          - python3-tk
+          - libharfbuzz-dev
+          - libfribidi-dev
+          - libxcb1-dev
 
-  - name: "GIT clone dotfiles"
-    git:
-      repo: https://github.com/jorgepvasconcelos/dotfiles
-      dest: ~/dotfiles
-      depth: 1
-  - name: "Copy ~/dotfiles to ~"
-    copy:
-      src: ~/dotfiles/
-      dest: ~/
-  - name: "Delete /dotfiles"
-    file:
-      path: ~/dotfiles
-      state: absent
+        state: present
 
-  - name: "GIT clone PL10K"
-    git:
-      repo: https://github.com/romkatv/powerlevel10k.git
-      dest: ~/powerlevel10k
-      depth: 1
-  - name: "GIT clone zsh-autosuggestions"
-    git:
-      repo: https://github.com/zsh-users/zsh-autosuggestions.git
-      dest: ~/.zsh/zsh-autosuggestions
-      depth: 1
-  - name: "GIT clone ASDF"
-    git:
-      repo: https://github.com/asdf-vm/asdf.git
-      dest: ~/.asdf
-      version: v0.11.3
-      depth: 1
+    - name: "Dowloading Nerd Fonts"
+      unarchive:
+        src: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Agave.zip
+        dest: ~/.fonts
+        remote_src: yes
+
+    - name: "GIT clone dotfiles"
+      git:
+        repo: https://github.com/jorgepvasconcelos/dotfiles
+        dest: ~/dotfiles
+        depth: 1
+    - name: "Copy ~/dotfiles to ~"
+      copy:
+        src: ~/dotfiles/
+        dest: ~/
+    - name: "Delete /dotfiles"
+      file:
+        path: ~/dotfiles
+        state: absent
+
+    - name: "GIT clone PL10K"
+      git:
+        repo: https://github.com/romkatv/powerlevel10k.git
+        dest: ~/powerlevel10k
+        depth: 1
+    - name: "GIT clone zsh-autosuggestions"
+      git:
+        repo: https://github.com/zsh-users/zsh-autosuggestions.git
+        dest: ~/.zsh/zsh-autosuggestions
+        depth: 1
+    - name: "GIT clone ASDF"
+      git:
+        repo: https://github.com/asdf-vm/asdf.git
+        dest: ~/.asdf
+        version: v0.11.3
+        depth: 1
 
 #  - name: "asdasd files"
 #    ansible-role-asdf:
