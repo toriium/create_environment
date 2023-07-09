@@ -13,6 +13,7 @@
           - curl
           - zsh
           - exa
+          - bat
           - wget
           - tor
         state: present
