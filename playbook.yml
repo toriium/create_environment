@@ -53,6 +53,10 @@
           - libharfbuzz-dev
           - libfribidi-dev
           - libxcb1-dev
+          - grub-efi
+          - grub2-common
+          - grub-customizer
+          - os-prober
 
         state: present
 
