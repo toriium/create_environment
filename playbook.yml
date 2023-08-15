@@ -39,6 +39,7 @@
           - liblzma-dev
           - lzma
           - libbz2-dev
+
           # Pillow
           - libtiff5-dev
           - libjpeg8-dev
@@ -53,11 +54,11 @@
           - libharfbuzz-dev
           - libfribidi-dev
           - libxcb1-dev
+
+          # GRUB
           - grub-efi
           - grub2-common
-          - grub-customizer
           - os-prober
-
         state: present
 
     - name: "Dowloading Nerd Fonts"
