@@ -1,0 +1,14 @@
+# Install docker
+curl -fsSL https://get.docker.com/ | sh
+sudo usermod -aG docker <your_username>
+
+# Install Docker-Desktop
+sudo apt install gnome-terminal
+
+sudo apt remove docker-desktop
+rm -r $HOME/.docker/desktop
+sudo rm /usr/local/bin/com.docker.cli
+sudo apt purge docker-desktop
+
+wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.15.0-amd64.deb
+sudo apt install ./docker-desktop-*-amd64.deb
