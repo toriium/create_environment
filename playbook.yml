@@ -16,6 +16,7 @@
           - bat
           - wget
           - tor
+          - ranger
         state: present
 
     - name: "Install DEVELOPMENT packages from apt"
