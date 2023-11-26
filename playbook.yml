@@ -17,6 +17,7 @@
           - wget
           - tor
           - ranger
+          - htop
         state: present
 
     - name: "Install DEVELOPMENT packages from apt"
