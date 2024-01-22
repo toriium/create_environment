@@ -78,12 +78,12 @@
         depth: 1
     - name: "Copy ~/dotfiles to ~"
       copy:
-        src: ~/dotfiles/
+        src: ~/create_environment/dotfiles/
         dest: ~/
-    - name: "Delete /dotfiles"
-      file:
-        path: ~/dotfiles
-        state: absent
+#    - name: "Delete /dotfiles"
+#      file:
+#        path: ~/dotfiles
+#        state: absent
 
     - name: "GIT clone PL10K"
       git:
