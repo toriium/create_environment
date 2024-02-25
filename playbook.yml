@@ -1,9 +1,9 @@
 - hosts: localhost
 
   tasks:
-    - name: "apt upgrade"
-      become: true
-      apt: upgrade=dist force_apt_get=yes
+#    - name: "apt upgrade"
+#      become: true
+#      apt: upgrade=dist force_apt_get=yes
 
     - name: "Install USER packages from apt"
       become: true
