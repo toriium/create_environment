@@ -1,0 +1,5 @@
+systemctl-tui
+cargo install systemctl-tui
+------------------------------------
+fast-ssh
+cargo install fast-ssh
