@@ -1,6 +1,6 @@
 # Install docker
 curl -fsSL https://get.docker.com/ | sh
-sudo usermod -aG docker <your_username>
+sudo usermod -aG docker $USER
 
 # Install Docker-Desktop
 sudo apt install gnome-terminal

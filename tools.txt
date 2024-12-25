@@ -3,3 +3,9 @@ cargo install systemctl-tui
 ------------------------------------
 fast-ssh
 cargo install fast-ssh
+------------------------------------
+exa
+cargo install exa
+------------------------------------
+yazi
+cargo install yazi
