@@ -1,6 +1,15 @@
 # Install docker
 curl -fsSL https://get.docker.com/ | sh
 sudo usermod -aG docker $USER
+newgrp docker
+
+
+# Test
+docker ps
+
+## If error
+sudo apt-get install -y uidmap
+dockerd-rootless-setuptool.sh install --force
 
 # Install Docker-Desktop
 sudo apt install gnome-terminal
@@ -10,7 +19,7 @@ rm -r $HOME/.docker/desktop
 sudo rm /usr/local/bin/com.docker.cli
 sudo apt purge docker-desktop
 
-wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.25.0-amd64.deb
+wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb
 sudo apt install ./docker-desktop-*-amd64.deb
 
 
