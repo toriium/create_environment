@@ -9,3 +9,14 @@ cargo install exa
 ------------------------------------
 yazi
 cargo install yazi
+
+------------------------------------
+lazydocker
+asdf plugin add lazydocker https://github.com/comdotlinux/asdf-lazydocker.git
+asdf install lazydocker latest
+asdf global lazydocker latest
+------------------------------------
+lazyVim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
