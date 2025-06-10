@@ -5,6 +5,11 @@ asdf plugin add nodejs
 asdf plugin add golang
 asdf plugin add rust
 asdf plugin add neovim
+asdf plugin add lazygit
+asdf plugin add kubectl
+asdf plugin add minikube
+asdf plugin add helm
+asdf plugin add lazydocker
 
 # install pkgs
 asdf install python latest
@@ -13,6 +18,11 @@ asdf install nodejs latest
 asdf install golang latest
 asdf install rust latest
 asdf install neovim latest
+asdf install lazygit latest
+asdf install kubectl latest
+asdf install minikube latest
+asdf install helm latest
+asdf install lazydocker latest
 
 # set default
 asdf global python latest
@@ -21,3 +31,8 @@ asdf global nodejs latest
 asdf global golang latest
 asdf global rust latest
 asdf global neovim latest
+asdf global lazygit latest
+asdf global kubectl latest
+asdf global minikube latest
+asdf global helm latest
+asdf global lazydocker latest

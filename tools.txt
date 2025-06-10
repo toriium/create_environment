@@ -20,3 +20,11 @@ lazyVim
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 
+
+# Install flatpak | WHY DO YOU MAKE ME DO IT CANONICAL ?????????
+sudo apt install flatpak
+sudo apt install gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+Flathub
+- Eloquent
