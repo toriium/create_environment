@@ -10,6 +10,12 @@ cargo install exa
 yazi
 cargo install yazi
 
+
+------------------------------------
+flameshot
+sudo apt install flameshot
+/usr/bin/flameshot gui
+
 ------------------------------------
 lazydocker
 asdf plugin add lazydocker https://github.com/comdotlinux/asdf-lazydocker.git
