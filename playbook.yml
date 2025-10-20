@@ -14,6 +14,8 @@
           - tor
           - ranger
           - htop
+          - fuse # Appimage
+          - libfuse2 # Appimage
         state: present
 
     - name: "Install DEVELOPMENT packages from apt"
@@ -77,16 +79,6 @@
         src: ~/create_environment/dotfiles/
         dest: ~/
 
-    # - name: "GIT clone PL10K"
-    #   git:
-    #     repo: https://github.com/romkatv/powerlevel10k.git
-    #     dest: ~/powerlevel10k
-    #     depth: 1
-    # - name: "GIT clone zsh-autosuggestions"
-    #   git:
-    #     repo: https://github.com/zsh-users/zsh-autosuggestions.git
-    #     dest: ~/.zsh/zsh-autosuggestions
-    #     depth: 1
     - name: "GIT clone ASDF"
       git:
         repo: https://github.com/asdf-vm/asdf.git
