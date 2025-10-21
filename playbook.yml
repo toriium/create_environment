@@ -14,7 +14,7 @@
           - tor
           - ranger
           - htop
-          - fuse # Appimage
+          # - fuse # Appimage This bomb crashs ubuntu
           - libfuse2 # Appimage
         state: present
 
