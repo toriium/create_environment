@@ -1,4 +1,5 @@
 # Install docker
+sudo apt-get install -y uidmap
 curl -fsSL https://get.docker.com/ | sh
 sudo usermod -aG docker $USER
 newgrp docker
@@ -21,6 +22,31 @@ sudo apt purge docker-desktop
 
 wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb
 sudo apt install ./docker-desktop-*-amd64.deb
+
+#Install Portainer
+Portainer
+docker volume create portainer_data
+
+docker run -d \
+  -p 9000:9000 \
+  -p 9443:9443 \
+  --name portainer \
+  --restart=always \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v portainer_data:/data \
+  portainer/portainer-ce
+
+If rooteless
+docker run -d \
+  -p 9000:9000 \
+  -p 9443:9443 \
+  --name portainer \
+  --restart=always \
+  -v /run/user/1000/docker.sock:/var/run/docker.sock \
+  -v portainer_data:/data \
+  portainer/portainer-ce
+
+
 
 
 
