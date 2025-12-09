@@ -28,6 +28,7 @@ Portainer
 docker volume create portainer_data
 
 docker run -d \
+  --privileged \
   -p 9000:9000 \
   -p 9443:9443 \
   --name portainer \
@@ -38,6 +39,7 @@ docker run -d \
 
 If rooteless
 docker run -d \
+  --privileged \
   -p 9000:9000 \
   -p 9443:9443 \
   --name portainer \
