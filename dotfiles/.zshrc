@@ -69,13 +69,15 @@ setopt hist_find_no_dups
 # -------------------------------- [START] MY STUFF --------------------------------
 # [MY] exports
 export PATH="$HOME/.local/bin":$PATH
-export PATH="$HOME/.asdf/installs/rust/1.83.0/bin":$PATH
-export PATH="$HOME/.asdf/installs/nodejs/23.4.0/bin":$PATH
+export PATH="$HOME/.asdf/installs/rust/1.89.0/bin":$PATH
+export PATH="$HOME/.asdf/installs/nodejs/24.8.0/bin":$PATH
+export PATH="$HOME/go/bin":$PATH
+export PATH="$HOME/.cargo/bin":$PATH
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # [MY] sources
-. "$HOME/.asdf/asdf.sh"
+#. "$HOME/asdf/asdf.sh"
 #eval "$(fzf --zsh)"
-# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # [MY] alias
 alias la="exa -lah  --icons --sort extension --group-directories-first"
