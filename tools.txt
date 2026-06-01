@@ -32,5 +32,12 @@ sudo apt install flatpak
 sudo apt install gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-Flathub
-- Eloquent
+flatseal
+
+
+# GNOME EXTENSIONS 
+extension manager
+https://flathub.org/en/apps/com.mattjakeman.ExtensionManager
+
+dash-to-dock
+https://github.com/micheleg/dash-to-dock

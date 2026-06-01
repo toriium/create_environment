@@ -1,0 +1,10 @@
+[tools]
+go = "latest"
+lazydocker = "latest"
+lazygit = "latest"
+lazyjournal = "latest"
+lazyssh = "latest"
+node = "latest"
+python = "latest"
+rust = "latest"
+uv = "latest"
