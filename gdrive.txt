@@ -1,0 +1,19 @@
+rclone config
+n
+gdrive
+drive
+enter
+enter
+1
+enter = N
+enter = Y
+aprove on broser
+n
+y
+
+# test command
+rclone lsd gdrive:
+
+mkdir -p ~/GoogleDrive
+
+rclone mount gdrive: ~/GoogleDrive --vfs-cache-mode full --daemon

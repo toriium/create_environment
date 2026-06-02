@@ -17,6 +17,11 @@ sudo pacman -S --needed --noconfirm \
 	openssl \
 	yay
 
+# Install DEV packages
+sudo yay -S --noconfirm \
+	rclone \
+	fuse3
+
 # Add mise
 curl https://mise.run | sh
 mkdir -p ~/.config/mise
