@@ -15,7 +15,6 @@ sudo pacman -S --needed --noconfirm \
 	wget \
 	make \
 	openssl \
-	uidmap \
 	yay
 
 # Add mise
@@ -25,6 +24,8 @@ cp ./config.toml ~/.config/mise/config.toml
 mise install
 # In case you need
 # echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
+# echo "~/.local/bin/mise activate fish | source" >> ~/.config/fish/config.fish
+
 
 # Add Docker
 printf "Install Docker (Y/n): "
