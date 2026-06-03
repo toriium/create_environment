@@ -54,6 +54,35 @@ case "$install_vscode" in
 		;;
 esac
 
+# Add Remmina
+printf "Install Remmina? (Y/n): "
+read -r install_remmina
+case "$install_remmina" in
+  ""|[Yy]*)
+    yay -S --noconfirm remmina freerdp
+    ;;
+esac
+
+# Add Database
+printf "Install Dbeaver? (Y/n): "
+read -r install_dbeaver
+case "$install_dbeaver" in
+  ""|[Yy]*)
+    yay -S --noconfirm Dbeaver
+
+    ;;
+esac
+
+# Add Slack
+printf "Install Slack? (Y/n): "
+read -r install_slack
+case "$install_slack" in
+	""|[Yy]*)
+		yay -S --noconfirm slack-desktop
+		;;
+esac
+
+
 # Add Chrome
 printf "Install Chrome? (Y/n): "
 read -r install_chrome
