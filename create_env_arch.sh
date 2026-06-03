@@ -3,6 +3,21 @@
 echo "[sudo] Checking sudo access"
 sudo -v || exit 1
 
+
+# Add user to sudo group
+echo "Add user to sudo group? (Y/n): "
+read -r add_sudo
+case "$add_sudo" in
+  ""|[Yy]*)
+    sudo usermod -aG wheel $USER
+    # Enable wheel group in sudoers if not already enabled
+    if ! sudo grep -q '^%wheel ALL=(ALL:ALL) ALL' /etc/sudoers; then
+        sudo sed -i 's/^# \(%wheel ALL=(ALL:ALL) ALL\)/\1/' /etc/sudoers
+    fi
+    echo "User added to sudo group. Log out and back in for changes to take effect."
+    ;;
+esac
+
 # [UPDATE SYSTEM]
 echo "[pacman] UPDATE SYSTEM"
 sudo pacman -Syu --noconfirm
