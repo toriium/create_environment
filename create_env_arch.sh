@@ -18,6 +18,10 @@ case "$add_sudo" in
     ;;
 esac
 
+# Start-enable ssh-agent
+sudo systemctl --user start ssh-agent
+sudo systemctl --user enable ssh-agent
+
 # [UPDATE SYSTEM]
 echo "[pacman] UPDATE SYSTEM"
 sudo pacman -Syu --noconfirm
