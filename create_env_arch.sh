@@ -41,8 +41,8 @@ sudo yay -S --noconfirm \
 	rclone \
 	fuse3
 
-# Gnome connector
-sudo pacman -S gnome-browser-connector
+# Gnome
+sudo pacman -S gnome-browser-connector gnome-clocks
 
 # Add mise
 curl https://mise.run | sh
