@@ -1,5 +1,6 @@
 [tools]
 checkov = "latest"
+eza = "latest"
 go = "latest"
 hadolint = "latest"
 helm = "latest"
