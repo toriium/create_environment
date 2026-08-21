@@ -101,7 +101,12 @@ sudo yay -S --noconfirm \
     fuse3
 
 # Gnome
-sudo pacman -S gnome-browser-connector gnome-clocks
+sudo pacman -S --noconfirm \
+    gnome-browser-connector \
+    gnome-clocks \
+    gnome-snapshot \
+    gnome-tweaks \
+    gnome-extensions-app
 
 # Add mise
 curl https://mise.run | sh

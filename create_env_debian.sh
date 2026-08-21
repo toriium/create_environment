@@ -99,7 +99,12 @@ sudo apt install -y \
     fuse3
 
 # Gnome
-sudo apt install -y gnome-browser-connector gnome-clocks
+sudo apt install -y \
+    gnome-browser-connector \
+    gnome-clocks \
+    gnome-snapshot \
+    gnome-tweaks \
+    gnome-extensions-app
 
 # Add mise
 curl https://mise.run | sh
