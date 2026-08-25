@@ -146,7 +146,7 @@ esac
 # Add Remmina
 case "$install_remmina" in
 "" | [Yy]*)
-    sudo apt install -y remmina remmina-plugin-rdp
+    sudo apt install -y remmina remmina-plugin-rdp x11vnc
     ;;
 esac
 

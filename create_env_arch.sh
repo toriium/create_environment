@@ -143,7 +143,7 @@ esac
 # Add Remmina
 case "$install_remmina" in
 "" | [Yy]*)
-    sudo pacman -S --noconfirm remmina freerdp
+    sudo pacman -S --noconfirm remmina freerdp x11vnc
     ;;
 esac
 
