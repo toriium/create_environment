@@ -2,6 +2,7 @@ Dash to Dock
 https://extensions.gnome.org/extension/307/dash-to-dock/
 
 Repeat to Cycle
+Remenber to disable ubuntu dock repeat to cycle extension before using thi one
 https://extensions.gnome.org/extension/8222/repeat-to-cycle/
 
 GSConnect
