@@ -112,15 +112,9 @@ sudo pacman -S --noconfirm \
 curl https://mise.run | sh
 mkdir -p ~/.config/mise
 cp ./config.toml ~/.config/mise/config.toml
-## Activate mise
-if [ "$shell_type" = "fish" ]; then
-    ~/.local/bin/mise activate fish | source
-elif [ "$shell_type" = "zsh" ]; then
-    eval "$(~/.local/bin/mise activate zsh)"
-elif [ "$shell_type" = "bash" ]; then
-    eval "$(~/.local/bin/mise activate bash)"
-fi
-mise install
+## Install tools (call the binary directly: activating mise here would run
+## bash/zsh/fish code inside /bin/sh, which aborts the whole script)
+~/.local/bin/mise install --yes || echo "[mise] some tools failed to install, continuing..."
 
 # Add Docker
 case "$install_docker" in
