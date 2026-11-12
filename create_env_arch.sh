@@ -23,6 +23,10 @@ read -r install_vscode
 printf "Install Remmina? (Y/n): "
 read -r install_remmina
 
+## FileZilla
+printf "Install FileZilla? (Y/n): "
+read -r install_filezilla
+
 ## Dbeaver
 printf "Install Dbeaver? (Y/n): "
 read -r install_dbeaver
@@ -138,6 +142,13 @@ esac
 case "$install_remmina" in
 "" | [Yy]*)
     sudo pacman -S --noconfirm remmina freerdp x11vnc
+    ;;
+esac
+
+# Add FileZilla
+case "$install_filezilla" in
+"" | [Yy]*)
+    sudo pacman -S --noconfirm filezilla
     ;;
 esac
 
