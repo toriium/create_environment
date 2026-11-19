@@ -27,6 +27,10 @@ read -r install_remmina
 printf "Install FileZilla? (Y/n): "
 read -r install_filezilla
 
+## Flameshot
+printf "Install Flameshot? (Y/n): "
+read -r install_flameshot
+
 ## Dbeaver
 printf "Install Dbeaver? (Y/n): "
 read -r install_dbeaver
@@ -152,6 +156,13 @@ esac
 case "$install_filezilla" in
 "" | [Yy]*)
     sudo apt install -y filezilla
+    ;;
+esac
+
+# Add Flameshot
+case "$install_flameshot" in
+"" | [Yy]*)
+    sudo apt install -y flameshot
     ;;
 esac
 
